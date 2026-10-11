@@ -53,7 +53,7 @@ messy name → normalise → embed → block by active substance → rank by cos
 | v4 | retrieve the whole substance block instead of the top 10 | 100% | 67% |
 | v4, threshold 0.75 | match threshold chosen before the held-out run | 100% | 97% |
 
-Lowering the match threshold from 0.85 to 0.75 roughly doubled recall at a cost of about 2 points of precision.
+On all 344 queries, lowering the match threshold from 0.85 to 0.75 raised recall from 48% to 90%, while precision moved from 98% to 96% (an earlier run, before the test-generator fix). The 0.75 threshold was chosen before the held-out evaluation.
 
 ## Error analysis (held-out)
 
@@ -89,6 +89,6 @@ None came from retrieval, blocking, the pack rule or the name rule. (An earlier 
 
 ## Data and disclaimer
 
-Medicine data from Kela's public medicine price database (kela.fi), collected for this personal learning project. This is not affiliated with Kela or any employer, and no employer data or tools were used. Not for clinical or commercial decisions.
+Medicine data from Kela's public medicine price database (kela.fi), collected for this personal learning project. This is not affiliated with Kela or any employer, and no employer data or tools were used. A personal learning project, not a production pricing tool, and not for clinical use.
 
 *Aadarsh Kumar · [LinkedIn](https://www.linkedin.com/in/adz11) · [GitHub](https://github.com/AadarshKr-11)*
