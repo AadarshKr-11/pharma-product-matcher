@@ -34,7 +34,7 @@ messy name → normalise → embed → block by active substance → rank by cos
 | Strength rule | same strength **and unit**, every number in a combination (`5/160 mg` ≠ `10/160 mg`; `25 mg` ≠ `25 mikrog`) | embeddings scored 400 mg vs 600 mg at 0.98 |
 | Pack rule | same pack count | a 10-pack and a 100-pack have different prices |
 | Name rule | every word of the product name must appear in the query; prefer the most specific name | embeddings confused brands (Panadol vs Pamol) and variants (Panadol vs Panadol Zapp) |
-| Thresholds | ≥ 0.75 match · < 0.50 no match · otherwise not sure | uncertain cases get a second opinion instead of becoming silent errors |
+| Thresholds | ≥ 0.75 match · < 0.60 no match · otherwise not sure | uncertain cases get a second opinion instead of becoming silent errors |
 | LLM judge | only "not sure" cases → Gemini returns `{"match", "confidence", "reason"}` | rules handle ~95% of cases cheaply; the LLM is used only where it adds value |
 
 **Key finding:** embeddings handle language (abbreviations, word order, Finnish), but barely distinguish numbers and similar brand names. Business rules handle those, and the LLM handles the uncertain middle.
