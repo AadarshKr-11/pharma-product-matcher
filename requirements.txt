@@ -2,3 +2,4 @@ pandas
 numpy
 openpyxl
 sentence-transformers
+google-genai
